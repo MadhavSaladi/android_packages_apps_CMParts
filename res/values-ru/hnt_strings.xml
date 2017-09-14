@@ -28,4 +28,9 @@
     <string name="network_traffic_autohide_summary">Скрыть мониторинг трафика, когда нет активности</string>
     <string name="network_traffic_autohide_threshold_title">Порог простоя</string>
     <string name="network_traffic_autohide_threshold_summary">Мониторинг трафика будет скрыт, если значение тафика ниже <xliff:g id="value">%1$s</xliff:g> <xliff:g id="unit" example="kB">%2$s</xliff:g>/с</string>
+
+    <!-- Superuser indicator on status bar -->
+    <string name="su_indicator">Индикатор суперпользователя</string>
+    <string name="su_indicator_summary_on">Индикатор Суперпользователя виден, когда сессия активна</string>
+    <string name="su_indicator_summary_off">Переключите чтобы показать индикатор суперпользователя, когда сессия активна</string>
 </resources>
