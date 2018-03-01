@@ -216,15 +216,9 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
 
         mHandler = new Handler();
 
-<<<<<<< HEAD
         // Force Navigation bar related options
-        mDisableNavigationKeys = (SwitchPreference) findPreference(DISABLE_NAV_KEYS);
-
-<<<<<<< HEAD
-        mNavigationPreferencesCat = (PreferenceCategory) findPreference(CATEGORY_NAVBAR);
 
         // Navigation bar left
-        mNavigationBarLeftPref = (SwitchPreference) findPreference(KEY_NAVIGATION_BAR_LEFT);
 
         Action defaultHomeLongPressAction = Action.fromIntSafe(res.getInteger(
                 com.android.internal.R.integer.config_longPressOnHomeBehavior));
@@ -238,21 +232,11 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
                 defaultHomeDoubleTapAction);
 
         // Navigation bar home long press
-        mNavigationHomeLongPressAction = initList(KEY_NAVIGATION_HOME_LONG_PRESS,
-                homeLongPressAction);
 
         // Navigation bar home double tap
-        mNavigationHomeDoubleTapAction = initList(KEY_NAVIGATION_HOME_DOUBLE_TAP,
-                homeDoubleTapAction);
 
         // Navigation bar recents long press activity needs custom setup
-        mNavigationRecentsLongPressAction =
-                initRecentsLongPressAction(KEY_NAVIGATION_RECENTS_LONG_PRESS);
 
-=======
->>>>>>> 13b16fe... [DUI] Remove obsolete navigation bar category from Buttons settings
-=======
->>>>>>> bbaedc2... [DUI] Buttons: moved enable on-screen nav bar switch to Navigation
         final CMHardwareManager hardware = CMHardwareManager.getInstance(getActivity());
 
         // Only visible on devices that does not have a navigation bar already,
@@ -296,16 +280,9 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
                 mHomeAnswerCall = null;
             }
 
-<<<<<<< HEAD
             mHomeLongPressAction = initList(KEY_HOME_LONG_PRESS, homeLongPressAction);
             mHomeDoubleTapAction = initList(KEY_HOME_DOUBLE_TAP, homeDoubleTapAction);
-            if (mDisableNavigationKeys.isChecked()) {
-                mHomeLongPressAction.setEnabled(false);
-                mHomeDoubleTapAction.setEnabled(false);
-            }
 
-=======
->>>>>>> 13b16fe... [DUI] Remove obsolete navigation bar category from Buttons settings
             hasAnyBindableKey = true;
         } else {
             prefScreen.removePreference(homeCategory);
@@ -647,13 +624,9 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         }
 
         /* Toggle hardkey control availability depending on navbar state */
-        if (mNavigationPreferencesCat != null) {
+            {
             if (navbarEnabled) {
-                mNavigationPreferencesCat.addPreference(mNavigationHomeLongPressAction);
-                mNavigationPreferencesCat.addPreference(mNavigationHomeDoubleTapAction);
             } else {
-                mNavigationPreferencesCat.removePreference(mNavigationHomeLongPressAction);
-                mNavigationPreferencesCat.removePreference(mNavigationHomeDoubleTapAction);
             }
         }
         if (homeCategory != null) {

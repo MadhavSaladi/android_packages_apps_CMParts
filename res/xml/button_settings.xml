@@ -26,7 +26,6 @@
         android:persistent="false" />
 
     <PreferenceCategory
-<<<<<<< HEAD
         android:key="recents_options"
         android:title="@string/recents_options" >
 
@@ -84,8 +83,6 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-=======
->>>>>>> 13b16fe... [DUI] Remove obsolete navigation bar category from Buttons settings
         android:key="power_key"
         android:title="@string/hardware_keys_power_key_title" >
 
